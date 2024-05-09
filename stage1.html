@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash</title>
+    <link rel="icon" href="image/z1.png">
+    <style>
+        #fish {
+            width: 250px;
+            height: auto; 
+            position: absolute;
+            left: 0;
+            opacity: 100%;
+            transition: 0.5s;
+            margin-top: 5%;
+        }
+        body{
+            background-image: url("image/back.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        #sambar{
+            width: 400px;
+            height: 180px;
+            background-color: rgb(0, 166, 255);
+            margin-left: 350px;
+            margin-top: 280px;
+            border: 20px solid rgb(123, 0, 255);
+            border-radius: 30px;
+            opacity: 0%;
+            transition: 0.5s;
+            -webkit-box-shadow:0px 0px 50px 10px #ea00ff ;
+            -moz-box-shadow:0px 0px 50px 10px #ea00ff ;
+            box-shadow:0px 0px 50px 10px #ea00ff ;
+        }
+        #image{
+            width: 390px;
+            position: absolute;
+            opacity: 100%;
+            margin-left: 110%;
+            display: flex;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-play-state: paused;
+        }
+        @keyframes move{
+            0% {left: 0%;}
+            10%{top: -20px;}
+            20%{top: 40px;}
+            30%{top: -80px;}
+            40%{top:40px}
+            50%{top: -80px;}
+            60%{top: 40px;}
+            70%{top: -80px;}
+            80%{top:40px}
+            90%{top:-80px}
+            100% {left: -170%;}
+        }
+        #cage{
+            width: 700px;
+            position: absolute;
+            margin-top: -1050px;
+            margin-left: 280px;
+            transition: 0.5s;
+        }
+        #key{
+            width: 100px;
+            position: absolute;
+            margin-left: 880px;
+            margin-top: -600px;
+            transition: 0.5s;
+        }
+        #key:hover{
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/z1.png" id="fish"> 
+    <div id="sambar"></div>
+    <img src="image/enemy.png" id="image">
+    <img src="image/cage.png" id="cage">
+    <img src="image/key.webp" id="key" onclick="(quiz())">
+</body>
+</html>
+<script>
+    let fish = document.getElementById("fish");
+    let current = 0;
+    let index = 0;
+    let image = document.getElementById("image");
+    let cage = document.getElementById("cage");
+    let key = document.getElementById("key");
+    let images = ["image/z1.png", "image/z2.png", "image/z3.png"];
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "ArrowRight") {
+            if (index < images.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            fish.src = images[index];
+            fish.style.left = current + 'px';
+            fish.style.width = "250px";
+            if (current != 520) {
+                current += 40;
+            } else {
+                current += 0;
+                for (let i = 0; i <= 2; i++) {
+                    cage.style.marginTop = "-25%";
+                }
+                setTimeout(function() {
+                    key.style.marginTop = "-400px";
+                }, 5000); 
+                fish.src = "image/cageChar.png";
+            }
+        }
+        if (current == 80) {
+            image.style.animationPlayState = "running"; 
+        }
+    });
+    function quiz(){
+        location.href="task1.html"
+    }
+</script>

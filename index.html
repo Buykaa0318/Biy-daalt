@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash</title>
+    <link rel="icon" href="image/z1.png">
+    <style>
+        #fish {
+            width: 250px;
+            height: auto; 
+            position: absolute;
+            left: 200px;
+            opacity: 100%;
+            transition: 0.5s;
+            margin-top: 20%;
+        }
+        body{
+            background-image: url("image/back.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        #image{
+            width: 390px;
+            position: absolute;
+            opacity: 100%;
+            margin-left: 1350px;
+            margin-top: 120px;
+            display: flex;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-play-state: paused;
+        }
+       .base{
+        height: 700px;
+        top: 0;
+        position: absolute;
+        margin-left: -150px;
+       }
+       #begin{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        opacity: 100%;
+        transition: 0.5s;
+       }
+       .pro{
+        width: 120px;
+        height: 120px;
+        border: 3px solid aquamarine;
+        z-index: 15;
+        top: 100px;
+        left: 500px;
+        position: absolute;
+       }
+       .pro img{
+        position: absolute;
+        margin-top: -387px;
+        margin-left: -340px;
+        
+       }
+       #begin h2{
+        position: absolute;
+        left: 650px;
+        top: 78px;
+        color: white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       }
+       #begin h2:nth-child(3){
+        position: absolute;
+        left: 650px;
+        top: 110px;
+        color: white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       }
+       #begin h2:nth-child(4){
+        position: absolute;
+        left: 650px;
+        top: 140px;
+        color: white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       }
+       #begin h2:nth-child(5){
+        position: absolute;
+        left: 650px;
+        top: 172px;
+        color: white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       }
+        .center{
+            width: 695px;
+            position: absolute;
+            margin-left: 500px;
+            margin-top: 300px;
+            color: white;
+            text-align: justify;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        p{
+            font-size: 10px;
+        }
+
+        .char{
+            font-size: 22px;
+            height: 40px;
+            animation: an 1s ease-out 1 both;
+            display: inline-block;
+        }
+
+        @keyframes an{
+            from{
+                opacity: 0;
+                transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+            }
+            to{
+                opacity: 1;
+                transform: perspective(500px) translate3d(0, 0, 0);
+            }
+        }
+        .cahr2{
+            width: 350px;
+            margin-top: 150px;
+            animation: move 1.5s infinite alternate;
+        }
+        @keyframes move{
+            0%{margin-top: 20px;}
+            100%{margin-top: 80px;}
+        }
+        .button-22 {
+            appearance: button;
+            background-color: #00588b;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            margin-top: 500px;
+            margin-left: 420px;
+            z-index: 100;
+            }
+            #failed img{
+                width: 250px;
+            }
+            a{
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-decoration: none;
+            }
+            .button-22:after {
+            background-clip: padding-box;
+            background-color: #08daff;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+            .button-22:main,
+            .button-20:focus {
+            user-select: auto;
+            }
+            .button-22:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            }
+            .button-22:disabled {
+            cursor: auto;
+            }
+            .button-22:active {
+            border-width: 4px 0 0;
+            background: none;
+            }
+            .fa-solid{
+                font-size: 30px;
+                margin-top: -20px;
+                margin-left: -20px;
+                position: absolute;
+            }
+    </style>
+</head>
+<body>
+    <img src="image/z1.png" id="fish"> 
+    <img src="image/bbase.png" class="base">
+    <div id="begin">
+        <div class="pro">
+            <img src="image/char.png">
+        </div>
+        <h2>Нэр: Flash</h2>
+        <h2>Нас: 15</h2>
+        <h2>Хүч: Ухаалаг, зоригтой</h2>
+        <h2>Үүрэг: Сансарын супер баатар</h2>
+        <div class="center">
+            <p id="text"> Нэгэн өдөр дэлхийд аюул учирч түүнийг найзууд нь дуудлаа. Ийн тэрээр дэлхийг зорих боллоо. Түүний дэлхийд хүрэх зам хялбар байсангүй бүгдээрээ flash-ийг найзууд дээр нь очиход тусалцгаая.</p>
+      </div>
+      <img src="image/char2.png" class="cahr2">
+      <button class="button-22" role="button" onclick="rel()"><a href="#">Тоглох</a></button>
+    </div>
+</body>
+</html>
+<script>
+    let fish = document.getElementById("fish");
+    let current = 200;
+    let images = ["image/z1.png", "image/z2.png", "image/z3.png"];
+    let index = 0;
+    let image = document.getElementById("image");
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "ArrowRight") {
+            if (index < images.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            fish.src = images[index];
+            fish.style.left = current + 'px';
+            fish.style.width = "250px";
+            if (current != 1320) {
+                current += 40;
+            } else {
+                current += 0;
+                location.href="stage1.html"
+            }
+        }
+    });
+    var text = document.getElementById('text');
+        var newDom = '';
+        var animationDelay = 10;
+
+        for(let i = 0; i < text.innerText.length; i++)
+        {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+        }
+
+        text.innerHTML = newDom;
+        var length = text.children.length;
+
+        for(let i = 0; i < length; i++)
+        {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+    function rel(){
+        let begin = document.getElementById("begin")
+        begin.style.opacity="0%"
+    }
+</script>

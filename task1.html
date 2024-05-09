@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/91c8b6af86.js" crossorigin="anonymous"></script>
+    <title>TASK2</title>
+    <style>
+        body{
+            background-image: url("image/Hback.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        #image{
+            width: 140px;
+            position: absolute;
+            margin-left: 1350px;
+            margin-top: 10px;
+            animation-name: move;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image2{
+            width: 140px;
+            position: absolute;
+            margin-left: 1450px;
+            margin-top: 10px;
+            animation-name: move2;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image3{
+            width: 140px;
+            position: absolute;
+            margin-left: 1350px;
+            margin-top: 200px;
+            animation-name: move3;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image4{
+            width: 140px;
+            position: absolute;
+            margin-left: 1550px;
+            margin-top: 100px;
+            animation-name: move4;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image5{
+            width: 140px;
+            position: absolute;
+            margin-left: 1350px;
+            margin-top: 400px;
+            animation-name: move5;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image6{
+            width: 140px;
+            position: absolute;
+            margin-left: 1450px;
+            margin-top: 250px;
+            animation-name: move6;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image7{
+            width: 140px;
+            position: absolute;
+            margin-left: 1450px;
+            margin-top: 200px;
+            animation-name: move7;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image8{
+            width: 140px;
+            position: absolute;
+            margin-left: 1450px;
+            margin-top: 250px;
+            animation-name: move8;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        #image9{
+            width: 140px;
+            position: absolute;
+            margin-left: 1450px;
+            margin-top: 200px;
+            animation-name: move9;
+           animation-duration: 20s; 
+           opacity: 100%;
+        }
+        @keyframes move{
+            0% {left: -10px;}
+            10%{top: -10px;}
+            20%{top: 20px;}
+            30%{top: -40px;}
+            40%{top:60px}
+            50%{top: -30px;}
+            60%{top: 80px;}
+            70%{top: -50px;}
+            80%{top:90px}
+            90%{top:-70px}
+            100% {left: -1750px;}
+        }
+        @keyframes move2{
+            0% {left: -10px;}
+            10%{top: 20px;}
+            20%{top: -40px;}
+            30%{top: 60px;}
+            40%{top:-20px}
+            50%{top: 80px;}
+            60%{top: -70px;}
+            70%{top: 100px;}
+            80%{top:-90px}
+            90%{top:70px}
+            100% {left: -1650px;}
+        }
+        @keyframes move3{
+            0% {left: -10px;}
+            10%{top: -20px;}
+            20%{top: 40px;}
+            30%{top: -80px;}
+            40%{top:120px}
+            50%{top: -160px;}
+            60%{top: 200px;}
+            70%{top: -240px;}
+            80%{top:280px}
+            90%{top:-320px}
+            100% {left: -1650px;}
+        }
+        @keyframes move4{
+            0% {left: -10px;}
+            10%{top: 10px;}
+            20%{top: -20px;}
+            30%{top: 30px;}
+            40%{top:-40px}
+            50%{top: 50px;}
+            60%{top: -60px;}
+            70%{top: 70px;}
+            80%{top:-80px}
+            90%{top:90px}
+            100% {left: -1750px;}
+        }
+        @keyframes move5{
+            0% {left: -10px;}
+            10%{top: -10px;}
+            20%{top: 20px;}
+            30%{top: -40px;}
+            40%{top:60px}
+            50%{top: -30px;}
+            60%{top: 80px;}
+            70%{top: -50px;}
+            80%{top:90px}
+            90%{top:-70px}
+            100% {left: -1650px;}
+        }
+        @keyframes move6{
+            0% {left: -10px;}
+            10%{top: 20px;}
+            20%{top: -40px;}
+            30%{top: 60px;}
+            40%{top:-20px}
+            50%{top: 80px;}
+            60%{top: -70px;}
+            70%{top: 100px;}
+            80%{top:-90px}
+            90%{top:70px}
+            100% {left: -1650px;}
+        }
+        @keyframes move7{
+            0% {left: -10px;}
+            10%{top: -50px;}
+            20%{top: 100px;}
+            30%{top: -150px;}
+            40%{top:200px}
+            50%{top: -250px;}
+            60%{top: 300px;}
+            70%{top: -350px;}
+            80%{top:400px}
+            90%{top:-450px}
+            100% {left: -1650px;}
+        }
+        @keyframes move8{
+            0% {left: -60px;}
+            10%{top: 120px;}
+            20%{top: -180px;}
+            30%{top: 240px;}
+            40%{top:-300px}
+            50%{top: 360px;}
+            60%{top: -420px;}
+            70%{top: 480px;}
+            80%{top:-540px}
+            90%{top:600px}
+            100% {left: -1650px;}
+        }
+        @keyframes move9{
+            0% {left: -90px;}
+            10%{top: -200px;}
+            20%{top: 400px;}
+            30%{top: -100px;}
+            40%{top:40px}
+            50%{top: -200px;}
+            60%{top: 200px;}
+            70%{top: -400px;}
+            80%{top:600px}
+            90%{top:-700px}
+            100% {left: -1650px;}
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+body{text-align:center}
+div{display:block;position:absolute}
+
+.container{
+	width:520px;
+	height:520px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+    border: 10px solid aqua;
+    border-radius: 30px;
+    background-color: white;
+    filter: drop-shadow(5px 5px 20px #0352ff);
+    visibility: hidden;
+    transition: 1s;
+	}
+    
+h1{
+	background:#fff;
+	width:100%;
+	height:60%;
+	margin:0;
+	padding:0;
+	display:flex;
+	font-family:'Titan One',cursive;
+	font-size:90px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center;
+    font-weight: 900;
+    border-radius: 20px;
+    
+	}
+
+h1 span{width:100%;position:relative}
+
+h1 span:before{
+	background:linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	content:"";
+	mix-blend-mode:screen
+	}
+
+[class*="blobs"]
+	{mix-blend-mode:color;animation:blobs 5s ease-in-out infinite alternate}
+
+.blobs_1{
+	background:#ff1493;
+	width:60px;
+	height:60px;
+	top:90px;
+	left:210px
+	}
+
+.blobs_2{
+	background:#ff4500;
+	width:80px;
+	height:80px;
+	top:155px;
+	left:230px
+	}
+
+.blobs_3{
+	background:#00ff00;
+	width:60px;
+	height:60px;
+	top:145px;
+	left:20px
+	}
+
+.blobs_4{
+	background:#ff0000;
+	width:100px;
+	height:100px;
+	top:115px;
+	left:100px
+	}
+
+.blobs_5{
+	background:#ffff00;
+	width:50px;
+	height:50px;
+	top:55px;
+	left:70px
+	}
+
+.blobs_6{
+	background:#00ffff;
+	width:60px;
+	height:60px;
+	top:220px;
+	left:55px
+	}
+
+.blobs_7{
+	background:#ff8c00;
+	width:50px;
+	height:50px;
+	top:210px;
+	left:180px
+	}
+
+@keyframes blobs{
+	0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
+	10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
+	20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
+	30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
+	40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
+	50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
+	60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
+	70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
+	80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
+	90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
+	100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
+	}
+    .original-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    border-bottom: 4px solid #179e43;
+    transition: 0.3s;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    background-color: #19d256;
+    margin-top: 130px;
+    margin-left: 185px;
+    }
+    .star{
+        width: 300px;
+        position: absolute;
+        top: 0;
+        margin-top: 150px;
+        margin-left: -150px;
+    }
+    .original-button:hover {
+    box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+    border-bottom-width: 2px;
+    transform: translateY(2px);
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+body,
+html {
+	font-family: "Audiowide", cursive;
+}
+
+    p {
+        margin: auto;
+
+    }
+
+    .large {
+        font-size: 6rem;
+        color: red;
+        margin-top: 10px;
+    }
+
+    .outline {
+        background-clip: text;
+        color: #ffdd40;
+        animation: outline 1s ease-in-out 1.5s forwards;
+    }
+
+    @keyframes outline {
+        from {
+            text-shadow: 0em -7em 10em #fff;
+        }
+        to {
+            text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
+        }
+    }
+
+    #failed{
+        width:520px;
+        height:520px;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        border: 10px solid rgb(255, 60, 0);
+        border-radius: 30px;
+        background-color: white;
+        filter: drop-shadow(5px 5px 20px #ff0303);
+        visibility: hidden;
+        transition: 1s;
+	}
+    .button-22 {
+            appearance: button;
+            background-color: #00588b;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: -220px;
+            }
+            #failed img{
+                width: 250px;
+            }
+            a{
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-decoration: none;
+            }
+            .button-22:after {
+            background-clip: padding-box;
+            background-color: #08daff;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+            .button-22:main,
+            .button-20:focus {
+            user-select: auto;
+            }
+            .button-22:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            }
+            .button-22:disabled {
+            cursor: auto;
+            }
+            .button-22:active {
+            border-width: 4px 0 0;
+            background: none;
+            }
+            .fa-solid{
+                font-size: 30px;
+                margin-top: -20px;
+                margin-left: -20px;
+                position: absolute;
+            }
+            .back {
+            appearance: button;
+            background-color: #00588b;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            margin-top: 0px;
+            margin-left: -650px;
+            }
+            #failed img{
+                width: 250px;
+            }
+            a{
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-decoration: none;
+            padding-left: 15px;
+            }
+            .back:after {
+            background-clip: padding-box;
+            background-color: #08daff;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+            .back:main,
+            .button-20:focus {
+            user-select: auto;
+            }
+            .back:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            }
+            .back:disabled {
+            cursor: auto;
+            }
+            .back:active {
+            border-width: 4px 0 0;
+            background: none;
+            }
+            .fa-solid{
+                font-size: 30px;
+                margin-top: -20px;
+                margin-left: -20px;
+                position: absolute;
+            }
+    </style>
+</head>
+<body>
+    <script src="js.js"></script>
+    <img src="image/fish.png" id="image" onclick="my()">
+    <img src="image/fish.png" id="image2" onclick="my2()">
+    <img src="image/fish.png" id="image3" onclick="my3()">
+    <img src="image/fish.png" id="image4" onclick="my4()">
+    <img src="image/fish.png" id="image5" onclick="my5()">
+    <img src="image/fish.png" id="image6" onclick="my6()">
+    <img src="image/fish.png" id="image7" onclick="my7()">
+    <img src="image/fish.png" id="image8" onclick="my8()">
+    <img src="image/fish.png" id="image9" onclick="my9()">
+    <div class="container" id="cont">
+        <h1><span>LEVEL<br>UP!</span></h1>
+        <div class="blobs_1"></div>
+        <div class="blobs_2"></div>
+        <div class="blobs_3"></div>
+        <div class="blobs_4"></div>
+        <div class="blobs_5"></div>
+        <div class="blobs_6"></div>
+        <div class="blobs_7"></div>
+        <a href="DoneTASK1.html" class="original-button" onclick="back()">NEXT</a>
+        <img src="image/str.png" class="star">
+    </div>
+    <div id="failed">
+        <p class="large">FAILED</p>
+        <img src="image/failed.png">
+        <button class="button-22" role="button" onclick="rel()"><a href="#">TRY AGAIN</a></button>
+    </div>
+    <button class="back" role="button"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></button>
+</body>
+</html>
+<script>
+    let cont = document.getElementById("cont");
+    let fish = document.getElementById("image");
+    let fish2 = document.getElementById("image2");
+    let fish3 = document.getElementById("image3");
+    let fish4 = document.getElementById("image4");
+    let fish5 = document.getElementById("image5");
+    let fish6 = document.getElementById("image6");
+    let fish7 = document.getElementById("image7")
+    let fish8 = document.getElementById("image8");
+    let fish9 = document.getElementById("image9");;
+    let s = false;
+    let s2 = false;
+    let s3 = false;
+    let s4 = false;
+    let s5 = false;
+    let s6 = false;
+    let s7 = false;
+    let s8 = false;
+    let s9 = false;
+    let check = false;
+
+    function my() {
+        fish.style.visibility="hidden";
+        s = true;
+        win();
+    }
+
+    function my2() {
+        fish2.style.visibility="hidden";
+        s2 = true;
+        win();
+    }
+
+    function my3() {
+        fish3.style.visibility="hidden";
+        s3 = true;
+        win();
+    }
+
+    function my4() {
+        fish4.style.visibility="hidden";
+        s4 = true;
+        win();
+    }
+
+    function my5() {
+        fish5.style.visibility="hidden";
+        s5 = true;
+        win();
+    }
+
+    function my6() {
+        fish6.style.visibility="hidden";
+        s6 = true;
+        win();
+    }
+
+    function my7() {
+        fish7.style.visibility="hidden";
+        s7 = true;
+        win();
+    }
+    function my8() {
+        fish8.style.visibility="hidden";
+        s8 = true;
+        win();
+    }
+
+    function my9() {
+        fish9.style.visibility="hidden";
+        s9 = true;
+        win();
+    }
+    function win() {
+        if (s && s2 && s3 && s4 && s5 && s6 && s7 && s8 && s9) {
+            check = true;
+            cont.style.visibility="visible";
+            return;
+        }
+    }
+
+    let remind = false;
+    let pos = false;
+    let failed = document.getElementById("failed");
+    
+    function checkLeftPosition() {
+        if (check) return; 
+        let images = document.querySelectorAll('img[id^="image"]');
+        images.forEach(image => {
+            let rightPosition = image.getBoundingClientRect().right;
+            if (!pos && rightPosition > window.innerWidth) {
+                pos = true;
+            }
+            if (pos && rightPosition <= 0 && !remind) {
+                failed.style.visibility="visible";
+                remind = true;
+            }
+            if (pos && rightPosition > 0 && rightPosition < window.innerWidth && remind) {
+                remind = false;
+            }
+        });
+    }
+
+    if (check) {
+        cont.style.visibility="visible";
+    } else {
+        window.addEventListener('mouseenter', function(event) {
+            if (!check && event.clientX <= 0) {
+                checkLeftPosition();
+            }
+        });
+        setInterval(function() {
+            if (!check) {
+                checkLeftPosition();
+            }
+        }, 2500);
+    }
+
+    function rel() {
+        location.reload();
+        failed.style.visibility="visible";
+    }
+</script>

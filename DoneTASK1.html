@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fish {
+            width: 250px;
+            height: auto; 
+            position: absolute;
+            left: 0;
+            bottom: 170px;
+            opacity: 100%;
+            transition: 0.5s;
+            margin-left: 500px;
+        }
+        #body{
+            background-image: url("image/back.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        #sambar{
+            width: 400px;
+            height: 180px;
+            background-color: rgb(0, 166, 255);
+            margin-left: 350px;
+            margin-top: 280px;
+            border: 20px solid rgb(123, 0, 255);
+            border-radius: 30px;
+            opacity: 0%;
+            transition: 0.5s;
+            -webkit-box-shadow:0px 0px 50px 10px #ea00ff ;
+            -moz-box-shadow:0px 0px 50px 10px #ea00ff ;
+            box-shadow:0px 0px 50px 10px #ea00ff ;
+        }
+        #cage{
+            width: 700px;
+            position: absolute;
+            margin-top: -420px;
+            margin-left: 280px;
+            transition: 0.5s;
+            animation: cage 7s forwards;
+        }
+        @keyframes cage {
+            0% { margin-top: -420px; }
+            100% { margin-top: -1100px; }
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="image/z1.png" id="fish"> 
+    <div id="sambar"></div>
+    <img src="image/cage.png" id="cage">
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let fish = document.getElementById("fish");
+        let current = 0;
+        let images = ["image/z1.png", "image/z2.png", "image/z3.png"];
+        let index = 0;
+        let image = document.getElementById("image");
+        let cage = document.getElementById("cage");
+        let key = document.getElementById("key");
+        let body = document.getElementById("body")
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "ArrowRight") {
+                if (index < images.length - 1) {
+                    index++;
+                } else {
+                    index = 0;
+                }
+                fish.src = images[index];
+                fish.style.left = current + 'px';
+                fish.style.width = "250px";
+                fish.style.bottom = "150px";
+                if (current != 1080) {
+                    current += 40;
+                } else {
+                    current += 0;
+                }
+                if(current ==1080){
+                    location.href="task2.html"
+                }
+            }
+        });
+    });
+</script>
+
+

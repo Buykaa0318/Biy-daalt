@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("image/441809.jpg");
+            background-size: cover;
+            overflow: hidden;
+        }
+        #fish {
+            width: 150px;
+            height: auto; 
+            position: absolute;
+            
+            left: 0; 
+            top: 0;
+            opacity: 100%;
+            transition: 0.5s;
+        }
+        #enemy{
+            width: 150px;
+            position: absolute;
+            visibility: visible;
+            margin-left: 87%;
+            margin-top: 10%;
+            animation: move;
+            animation-duration: 20s;
+        }
+        #enemy2{
+            width: 150px;
+            position: absolute;
+            visibility: visible;
+            margin-left: 87%;
+            margin-top: 30%;
+            animation: move;
+            animation-duration: 20s;
+        }
+        #enemy3{
+            width: 150px;
+            position: absolute;
+            visibility: visible;
+            margin-left: 87%;
+            margin-top: 17%;
+            animation: move;
+            animation-duration: 20s;
+        }
+        #enemy4{
+            width: 150px;
+            position: absolute;
+            visibility: visible;
+            margin-left: 87%;
+            margin-top: 3%;
+            animation: move;
+            animation-duration: 20s;
+        }
+        #enemy5{
+            width: 500px;
+            position: absolute;
+            visibility: visible;
+            margin-left: 87%;
+            margin-top: 40%;
+            animation: move;
+            animation-duration: 20s;
+        }
+        @keyframes move{
+            0%{margin-left: 1000px;}
+            100%{margin-left: -100px; }
+        }
+        .bullet {
+            position: absolute;
+            width: 300px; 
+            height: 300px; 
+            background-image: url(image/Fshoot.png);
+            background-size: 300px, 300px;
+            margin-top: -143px;
+            background-repeat: no-repeat;
+            opacity: 0; 
+            margin-left: -107px;
+        }
+        #Ebullet {
+            position: absolute;
+            width: 500px; 
+            height: 500px; 
+            right: 0;
+            margin-right: -100px;
+            margin-top: 110px;
+        } 
+        #failed{
+        width:520px;
+        height:520px;
+        position: absolute;
+        margin-left: 650px;
+        margin-top: 300px;
+        transform:translate(-50%,-50%);
+        border: 10px solid rgb(255, 60, 0);
+        border-radius: 30px;
+        background-color: white;
+        filter: drop-shadow(5px 5px 20px #ff0303);
+        opacity: 0;
+        transition: 0.7s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+    .button-22 {
+            appearance: button;
+            background-color: #00588b;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            margin-top: 400px;
+            }
+            #failed img{
+                width: 250px;
+                position: absolute;
+            }
+            a{
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-decoration: none;
+            }
+            .button-22:after {
+            background-clip: padding-box;
+            background-color: #08daff;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+            .button-22:main,
+            .button-20:focus {
+            user-select: auto;
+            }
+            .button-22:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            }
+            .button-22:disabled {
+            cursor: auto;
+            }
+            .button-22:active {
+            border-width: 4px 0 0;
+            background: none;
+            }
+            .fa-solid{
+                font-size: 30px;
+                margin-top: -20px;
+                margin-left: -20px;
+                position: absolute;
+            }
+            @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+body,
+html {
+	font-family: "Audiowide", cursive;
+}
+
+    p {
+        margin: auto;
+
+    }
+
+    .large {
+        font-size: 6rem;
+        color: red;
+        margin-top: 10px;
+    }
+    #boss{
+        width: 250px;
+        position: absolute;
+        right: 0;
+        top: 200px;
+        animation: Bmove infinite;
+        animation-duration: 4s;
+        transition: 0.5s;
+    }
+    @keyframes Bmove{
+        0%{top: 150px;}
+        50%{top:250px;}
+        100%{top: 150px;}
+    }
+    .container{
+	width:520px;
+	height:520px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+    border: 10px solid aqua;
+    border-radius: 30px;
+    background-color: white;
+    filter: drop-shadow(5px 5px 20px #0352ff);
+    visibility: hidden;
+    transition: 1s;
+	}
+    
+h1{
+	background:#fff;
+	width:100%;
+	height:60%;
+	margin:0;
+	padding:0;
+	display:flex;
+	font-family:'Titan One',cursive;
+	font-size:90px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center;
+    font-weight: 900;
+    border-radius: 20px;
+    
+	}
+
+h1 span{width:100%;position:relative}
+
+h1 span:before{
+	background:linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	content:"";
+	mix-blend-mode:screen
+	}
+
+[class*="blobs"]
+	{mix-blend-mode:color;animation:blobs 5s ease-in-out infinite alternate}
+
+.blobs_1{
+	background:#ff1493;
+	width:60px;
+	height:60px;
+	top:90px;
+	left:210px
+	}
+
+.blobs_2{
+	background:#ff4500;
+	width:80px;
+	height:80px;
+	top:155px;
+	left:230px
+	}
+
+.blobs_3{
+	background:#00ff00;
+	width:60px;
+	height:60px;
+	top:145px;
+	left:20px
+	}
+
+.blobs_4{
+	background:#ff0000;
+	width:100px;
+	height:100px;
+	top:115px;
+	left:100px
+	}
+
+.blobs_5{
+	background:#ffff00;
+	width:50px;
+	height:50px;
+	top:55px;
+	left:70px
+	}
+
+.blobs_6{
+	background:#00ffff;
+	width:60px;
+	height:60px;
+	top:220px;
+	left:55px
+	}
+
+.blobs_7{
+	background:#ff8c00;
+	width:50px;
+	height:50px;
+	top:210px;
+	left:180px
+	}
+
+@keyframes blobs{
+	0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
+	10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
+	20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
+	30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
+	40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
+	50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
+	60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
+	70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
+	80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
+	90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
+	100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
+	}
+    #boss2 {
+      width: 250px;
+      position: absolute;
+      right: 0;
+      top: 200px;
+      animation: move2 infinite;
+      animation-duration: 5s;
+      opacity: 0;
+    }
+    @keyframes move2 {
+      0% { top: 0px; }
+      50% { top: 400px; }
+      100% { top: 0px; }
+    }
+    #shoot {
+      position: absolute;
+      right: 0;
+      margin-right: -150px;
+      margin-top: -40px;
+      top: -86px;
+      animation: Smove infinite;
+      animation-duration: 5s;
+    }
+    #shoot2 {
+      position: absolute;
+      right: 0;
+      margin-right: -150px;
+      margin-top: 240px;
+      top: 0px;
+      animation: Smove2 infinite;
+      animation-duration: 5s;
+    }
+    #shoot3 {
+      position: absolute;
+      right: 0;
+      margin-right: -150px;
+      margin-top: -100px;
+      top: 0px;
+      animation: Smove3 infinite;
+      animation-duration: 5s;
+    }
+    @keyframes Smove {
+      0% { top: -240px; right: 0; }
+      50% { top: 50px; }
+      100% { top: -240px; right: 1500px; }
+    }
+    @keyframes Smove2 {
+      0% { top: -140px; right: 0; }
+      50% { top: -450px; }
+      100% { top: -140px; right: 1500px; }
+    }
+    @keyframes Smove3 {
+      0% {right: 0; }
+      100% {right: 1500px; top: -200px;}
+    }
+    </style>
+</head>
+<body>
+    <img src="image/z1.png" id="fish" > 
+    <img src="image/soldier.png" id="enemy" onclick="my()">
+    <img src="image/soldier.png" id="enemy2" onclick="my()">
+    <img src="image/soldier.png" id="enemy3" onclick="my()">
+    <img src="image/soldier.png" id="enemy4" onclick="my()">
+    <img src="image/enemy.png" id="boss">
+    <div id="failed">
+        <p class="large">FAILED</p>
+        <img src="image/failed.png">
+        <button class="button-22" role="button" onclick="rel()"><a href="#">TRY AGAIN</a></button>
+    </div>
+    <img src="image/enemy.png" id="boss2">
+    <img src="image/shoot.png" id="shoot">
+    <img src="image/shoot.png" id="shoot2">
+    <img src="image/shoot.png" id="shoot3">
+</body>
+<script>
+    let s = false;
+    let s2 = false;
+    let s3 = false;
+    let s4 = false;
+    let fish = document.getElementById("enemy");
+    let fish2 = document.getElementById("enemy2");
+    let fish3 = document.getElementById("enemy3");
+    let fish4 = document.getElementById("enemy4");
+    let bulletContainer = document.body;
+    let bulletCount = 0;
+    let index = 0;
+    let images = ["image/z1.png", "image/z2.png", "image/z3.png"];
+    let mm = document.getElementById("fish");
+    function createBullet() {
+        let bullet = document.createElement('div'); 
+        bullet.classList.add("bullet");
+        bulletContainer.appendChild(bullet);
+        let currentTop = parseInt(mm.style.top || 0) + mm.clientHeight / 2;
+        let currentLeft = parseInt(mm.style.left || 0) + mm.clientWidth / 2; 
+        bullet.style.top = currentTop + 'px'; 
+        bullet.style.left = currentLeft + 'px'; 
+        bullet.style.opacity = "100%"; 
+        let bulletInterval = setInterval(moveBullet, 10);
+        function moveBullet() {
+            currentLeft += 10; 
+            bullet.style.left = currentLeft + 'px';
+            if (currentLeft >= window.innerWidth) {
+                clearInterval(bulletInterval);
+                bulletContainer.removeChild(bullet);
+            }
+        }
+    }
+    let enemy = document.getElementById("enemy");
+    function checkCollision() {
+    let bullets = document.querySelectorAll('.bullet');
+    bullets.forEach(bullet => {
+        let bulletRect = bullet.getBoundingClientRect();
+        let enemyR = document.getElementById("enemy").getBoundingClientRect();
+        let bulletCenterX = bulletRect.left + bulletRect.width / 2;
+        let bulletCenterY = bulletRect.top + bulletRect.height / 2;
+        if (
+            bulletCenterX > enemyR.left &&
+            bulletCenterX < enemyR.right &&
+            bulletCenterY > enemyR.top &&
+            bulletCenterY < enemyR.bottom
+        ) {
+            bullet.remove();
+            setTimeout(() => {
+                enemy.style.visibility="hidden";
+                s = true;
+                win();
+                setTimeout(() => {
+                    enemy.remove();
+                    
+                }, 100);
+            }, 200);
+        }
+    });    
+    
+}
+setInterval(checkCollision, 10); 
+    document.addEventListener("keydown", function(event) {
+        if(event.key === " ") {
+            createBullet();
+        } else if (event.key === "ArrowRight") {
+            if (index < images.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            mm.src = images[index];
+            mm.style.left = (parseInt(mm.style.left) || 0) + 60 + 'px';
+        } else if (event.key === "ArrowLeft") {
+            if (index > 0) {
+                index--;
+            } else {
+                index = images.length - 1;
+            }
+            mm.src = images[index];
+            mm.style.left = (parseInt(mm.style.left) || 0) - 60 + 'px';
+        } else if (event.key === "ArrowUp") {
+            if (index > 0) {
+                index--;
+            } else {
+                index = images.length - 1;
+            }
+            mm.src = images[index];
+            mm.style.top = (parseInt(mm.style.top) || 0) - 60 + 'px';
+        } else if (event.key === "ArrowDown") {
+            if (index < images.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            mm.src = images[index];
+            mm.style.top = (parseInt(mm.style.top) || 0) + 60 + 'px';
+        }
+    });
+
+
+    let enemyy = document.getElementById("enemy");
+    let enemyTop = parseInt(enemyy.style.marginTop) || 0;
+    let moveDown = true; 
+function moveEnemy() {
+    if (moveDown) {
+        // Move down
+        enemyTop += 1;
+        enemyy.style.marginTop = enemyTop + 'px';
+        if (enemyTop >= window.innerHeight - enemyy.clientHeight) {
+            moveDown = false;
+        }
+    } else {
+        enemyTop -= 1;
+        enemyy.style.marginTop = enemyTop + 'px';
+        if (enemyTop <= 0) {
+            moveDown = true; 
+        }
+    }
+}
+
+    let enemy2 = document.getElementById("enemy2");
+    let enemy2Top = 100; 
+    let moveDown2 = true;
+    function moveEnemy2() {
+    }
+
+    setInterval(moveEnemy2, 10); 
+    function checkCollisionEnemy2() {
+        let bullets = document.querySelectorAll('.bullet');
+        bullets.forEach(bullet => {
+            let bulletRect = bullet.getBoundingClientRect();
+            let enemy2Rect = enemy2.getBoundingClientRect();
+            let bulletCenterX = bulletRect.left + bulletRect.width / 2;
+            let bulletCenterY = bulletRect.top + bulletRect.height / 2;
+            if (
+                bulletCenterX > enemy2Rect.left &&
+                bulletCenterX < enemy2Rect.right &&
+                bulletCenterY > enemy2Rect.top &&
+                bulletCenterY < enemy2Rect.bottom
+            ) {
+                bullet.remove();
+                setTimeout(() => {
+                    enemy2.style.visibility="hidden";
+                    s2 = true;
+                    win();
+                    setTimeout(() => {
+                        enemy2.remove();
+                    }, 100);
+                }, 200);
+            }
+        });
+    }
+
+    setInterval(checkCollisionEnemy2, 10);
+let enemy3 = document.getElementById("enemy3");
+let enemy3Top = parseInt(enemy3.style.marginTop) || 0;
+let moveDown3 = true;
+setInterval(moveEnemy3, 10);
+
+function checkCollisionEnemy3() {
+    let bullets = document.querySelectorAll('.bullet');
+    bullets.forEach(bullet => {
+        let bulletRect = bullet.getBoundingClientRect();
+        let enemy3Rect = enemy3.getBoundingClientRect();
+        let bulletCenterX = bulletRect.left + bulletRect.width / 2;
+        let bulletCenterY = bulletRect.top + bulletRect.height / 2;
+        if (
+            bulletCenterX > enemy3Rect.left &&
+            bulletCenterX < enemy3Rect.right &&
+            bulletCenterY > enemy3Rect.top &&
+            bulletCenterY < enemy3Rect.bottom
+        ) {
+            bullet.remove();
+            setTimeout(() => {
+                enemy3.style.visibility="hidden";
+                s3 = true;
+                win();
+                setTimeout(() => {
+                    enemy3.remove();
+                }, 100);
+            }, 200);
+        }
+    });
+}
+
+setInterval(checkCollisionEnemy3, 10);
+let enemy4 = document.getElementById("enemy4");
+let enemy4Top = parseInt(enemy4.style.marginTop) || 0;
+let moveDown4 = true;
+
+function moveEnemy4() {
+    if (moveDown4) {
+        enemy4Top += 1;
+        enemy4.style.marginTop = enemy4Top + 'px';
+        if (enemy4Top >= window.innerHeight - enemy4.clientHeight) {
+            moveDown4 = false;
+        }
+    } else {
+        enemy4Top -= 1;
+        enemy4.style.marginTop = enemy4Top + 'px';
+        if (enemy4Top <= 0) {
+            moveDown4 = true;
+        }
+    }
+}
+
+setInterval(moveEnemy4, 10);
+
+function checkCollisionEnemy4() {
+    let bullets = document.querySelectorAll('.bullet');
+    bullets.forEach(bullet => {
+        let bulletRect = bullet.getBoundingClientRect();
+        let enemy4Rect = enemy4.getBoundingClientRect();
+        let bulletCenterX = bulletRect.left + bulletRect.width / 2;
+        let bulletCenterY = bulletRect.top + bulletRect.height / 2;
+        if (
+            bulletCenterX > enemy4Rect.left &&
+            bulletCenterX < enemy4Rect.right &&
+            bulletCenterY > enemy4Rect.top &&
+            bulletCenterY < enemy4Rect.bottom
+        ) {
+            bullet.remove();
+            setTimeout(() => {
+                enemy4.style.visibility="hidden";
+                s4 = true;
+                win();
+                setTimeout(() => {
+                    enemy4.remove();
+                }, 100);
+            }, 200);
+        }
+    });
+}
+function win() {
+    let move = document.getElementById("boss")
+    let boss2 = document.getElementById("boss2")
+        if (s && s2 && s3 && s4) {
+            check = true;
+            boss.style.animationPlayState="paused"
+            boss.style.opacity="0"
+            boss2.style.opacity="100"
+            all()
+            return;
+        }
+    }
+    
+setInterval(checkCollisionEnemy4, 10);
+
+function moveEnemy2() {
+}
+setInterval(moveEnemy2, 10);
+function moveEnemy3() {
+    if (moveDown3) {
+        enemy3Top += 1;
+        enemy3.style.marginTop = enemy3Top + 'px';
+        if (enemy3Top >= window.innerHeight - enemy3.clientHeight) {
+            moveDown3 = false;
+        }
+    } else {
+        enemy3Top -= 1;
+        enemy3.style.marginTop = enemy3Top + 'px';
+        if (enemy3Top <= 0) {
+            moveDown3 = true;
+        }
+    }
+}
+setInterval(moveEnemy3, 10);
+function checkFishCollision() {
+        let fish = document.getElementById("fish");
+        let fishRect = fish.getBoundingClientRect();
+
+        let enemies = document.querySelectorAll('#enemy');
+        let enemies2 = document.querySelectorAll('#enemy2');
+        let enemies3 = document.querySelectorAll('#enemy3');
+        let enemies4 = document.querySelectorAll('#enemy4');
+        enemies.forEach(enemy => {
+            let enemyRect = enemy.getBoundingClientRect();
+            if (
+                fishRect.left < enemyRect.right &&
+                fishRect.right > enemyRect.left &&
+                fishRect.top < enemyRect.bottom &&
+                fishRect.bottom > enemyRect.top
+            ) {
+                // Collision detected, game over
+                gameOver();
+            }
+        });
+        enemies2.forEach(enemy => {
+            let enemy2Rect = enemy.getBoundingClientRect();
+            if (
+                fishRect.left < enemy2Rect.right &&
+                fishRect.right > enemy2Rect.left &&
+                fishRect.top < enemy2Rect.bottom &&
+                fishRect.bottom > enemy2Rect.top
+            ) {
+                // Collision detected, game over
+                gameOver();
+            }
+        });
+        enemies3.forEach(enemy => {
+            let enemy3Rect = enemy.getBoundingClientRect();
+            if (
+                fishRect.left < enemy3Rect.right &&
+                fishRect.right > enemy3Rect.left &&
+                fishRect.top < enemy3Rect.bottom &&
+                fishRect.bottom > enemy3Rect.top
+            ) {
+                // Collision detected, game over
+                gameOver();
+            }
+        });
+        enemies4.forEach(enemy => {
+            let enemy4Rect = enemy.getBoundingClientRect();
+            if (
+                fishRect.left < enemy4Rect.right &&
+                fishRect.right > enemy4Rect.left &&
+                fishRect.top < enemy4Rect.bottom &&
+                fishRect.bottom > enemy4Rect.top
+            ) {
+                // Collision detected, game over
+                gameOver();
+            }
+        });
+    }
+
+    function gameOver() {
+        enemy.style.animationPlayState="paused"
+        enemy2.style.animationPlayState ="paused"
+        enemy3.style.animationPlayState="paused"
+        enemy4.style.animationPlayState="paused"
+        mm.src = "image/boom.png";
+        setTimeout(function() {failed.style.opacity = "100%"; }, 1000);
+        failed.style.opacity="100";
+    }
+    function rel() {
+        location.reload();
+    }
+setInterval(checkFishCollision, 10);
+let shot = document.getElementById("shoot")
+shot.style.animationPlayState="paused"
+  shot.style.opacity="0"
+let shoot2 = document.getElementById("shoot3")
+  shoot2.style.animationPlayState="paused"
+  shoot2.style.opacity="0"
+  let shoot = document.getElementById("shoot2");
+    shoot
+    shoot.style.animationPlayState = "paused";
+    shoot.style.opacity = "0";
+
+
+
+
+
+
+
+function all(){
+    function checkBossPosition() {
+    let boss = document.getElementById("boss");
+    finish()
+    if (boss.offsetTop >= 350) {
+      go()
+      return;
+    }
+    if (boss.offsetTop >= 50) {
+      go2()
+      return;
+    }
+  }
+  let shoot = document.getElementById("shoot2");
+    shoot
+    shoot.style.animationPlayState = "paused";
+    shoot.style.opacity = "0";
+ 
+  function go() {
+      shoot.style.opacity="100"
+      shoot.style.animationPlayState = "running"; 
+  }
+  let shoot2 = document.getElementById("shoot3")
+  shoot2.style.animationPlayState="paused"
+  shoot2.style.opacity="0"
+    function go2() {
+      shoot2.style.opacity="100"
+      shoot2.style.animationPlayState = "running"; 
+  }
+  setTimeout(go, 2000);
+  setTimeout(checkBossPosition, 1000);
+  
+}
+function checkCollision2() {
+    let bullets = document.querySelectorAll('#bullet');
+    bullets.forEach(bullet => {
+        let bulletRect = bullet.getBoundingClientRect();
+        let boss2Rect = document.getElementById("boss2").getBoundingClientRect();
+        let bulletCenterX = bulletRect.left + bulletRect.width / 2;
+        let bulletCenterY = bulletRect.top + bulletRect.height / 2;
+        let tool = 0
+        if (
+            bulletCenterX > boss2Rect.left &&
+            bulletCenterX < boss2Rect.right &&
+            bulletCenterY > boss2Rect.top &&
+            bulletCenterY < boss2Rect.bottom
+        ) {
+            bullet.remove();
+            setTimeout(() => {
+                boss2.style.visibility="hidden";
+                win();
+                setTimeout(() => {
+                    tool+=1
+                }, 100);
+            }, 200);
+        }
+    });
+    
+}
+setTimeout(checkCollision2, 100);
+
+
+
+
+
+
+
+
+function finish(){
+    let bulletContainer = document.body;
+    let bulletCount = 0;
+    let index = 0;
+    let images = ["image/z1.png", "image/z2.png", "image/z3.png"];
+    let mm = document.getElementById("fish");
+
+    function createBullet() {
+        let bullet = document.createElement('div'); 
+        bullet.classList.add("bullet");
+        bulletContainer.appendChild(bullet);
+        let currentTop = parseInt(mm.style.top || 0) + mm.clientHeight / 2;
+        let currentLeft = parseInt(mm.style.left || 0) + mm.clientWidth / 2; 
+        bullet.style.top = currentTop + 'px'; 
+        bullet.style.left = currentLeft + 'px'; 
+        bullet.style.opacity = "100%"; 
+        let bulletInterval = setInterval(moveBullet, 10);
+        function moveBullet() {
+            currentLeft += 10; 
+            bullet.style.left = currentLeft + 'px';
+            if (currentLeft >= window.innerWidth) {
+                clearInterval(bulletInterval);
+                bulletContainer.removeChild(bullet);
+            }
+        }
+    }
+
+    function checkCollision2() {
+        let bullets = document.querySelectorAll('.bullet');
+        bullets.forEach(bullet => {
+            let bulletRect = bullet.getBoundingClientRect();
+            let boss2Rect = document.getElementById("boss2").getBoundingClientRect();
+            let bulletCenterX = bulletRect.left + bulletRect.width / 2;
+            let bulletCenterY = bulletRect.top + bulletRect.height / 2;
+            let shot = document.getElementById("shoot")
+            let shoot2 = document.getElementById("shoot3")
+            let shoot = document.getElementById("shoot2");
+            if (
+                bulletCenterX > boss2Rect.left &&
+                bulletCenterX < boss2Rect.right &&
+                bulletCenterY > boss2Rect.top &&
+                bulletCenterY < boss2Rect.bottom
+            ) {
+                bullet.remove();
+                setTimeout(() => {
+                    document.getElementById("boss2").style.visibility="hidden";
+                    shot.style.animationPlayState="paused"
+                    shot.style.opacity="0"
+                    shoot2.style.animationPlayState="paused"
+                    shoot2.style.opacity="0"
+                    shoot.style.animationPlayState = "paused";
+                    shoot.style.opacity = "0";                  
+                }, 200);
+            }
+        });
+    }
+    setInterval(checkCollision2, 10);
+
+    document.addEventListener("keydown", function(event) {
+        if(event.key === " ") {
+            createBullet();
+        } else if (event.key === "ArrowRight") {
+            mm.style.left = (parseInt(mm.style.left) || 0) + 60 + 'px';
+        } else if (event.key === "ArrowLeft") {
+            mm.style.left = (parseInt(mm.style.left) || 0) - 60 + 'px';
+        } else if (event.key === "ArrowUp") {
+            mm.style.top = (parseInt(mm.style.top) || 0) - 60 + 'px';
+        } else if (event.key === "ArrowDown") {
+            mm.style.top = (parseInt(mm.style.top) || 0) + 60 + 'px';
+        }
+        if (parseInt(mm.style.left) >= 1800) {
+            location.href="last.html"
+        }
+
+    });
+        }
+</script>
+</html>

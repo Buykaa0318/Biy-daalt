@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-image: url(image/earthh.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    #movingImage{
+      width: 150px;
+      position: absolute;
+      top: 250px;
+      left: 0;
+      animation: move;
+      animation-duration: 5s;
+      transition: 0.5s;
+    }
+    @keyframes move{
+      0%{left: 0;}
+      100%{left: 800px;}
+    }
+    .container{
+	width:520px;
+	height:520px;
+  margin-left: 600px;
+  margin-top: 300px;
+	transform:translate(-50%,-50%);
+    border: 10px solid aqua;
+    border-radius: 30px;
+    background-color: white;
+    filter: drop-shadow(5px 5px 20px #0352ff);
+    opacity: 0;
+    position: absolute;
+    transition: 1s;
+	}
+    
+h1{
+	background:#fff;
+	width:96%;
+	height:30%;
+	margin:0;
+	padding:0;
+	display:flex;
+	font-family:'Titan One',cursive;
+	font-size:45px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center;
+    font-weight: 900;
+    margin-left: 20px;
+    border-radius: 20px;
+    
+	}
+	.pp{
+		width: 400px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-size: 30px;
+		margin-left: 80px;
+		margin-top: -20px;
+		color: #0352ff;
+	}
+
+h1 span{width:100%;position:relative}
+
+h1 span:before{
+	background:linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	content:"";
+	mix-blend-mode:screen;
+	}
+
+  .star{
+        width: 300px;
+        position: absolute;
+        top: 0;
+        margin-top: 250px;
+        margin-left:100px;
+    }
+  </style>
+</head>
+<body>
+<img src="image/z1.png" id="movingImage">
+<div class="container" id="cont">
+  <h1><span>CONGRATULATIONS</span></h1>
+  <p class="pp">Та бүх саадыг амжилттай давж FLASH-ыг дэлийд хүрхэд нь тусалж чадлаа</p>
+  <img src="image/str.png" class="star">
+</div>
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const img = document.getElementById("movingImage");
+    let fin = document.getElementById("cont")
+    function checkPosition() {
+        const imgLeft = img.getBoundingClientRect().left;
+        if (imgLeft >= 700) {
+          img.style.opacity="0"
+          cont.style.opacity="1000"
+        }
+    }
+    setInterval(checkPosition, 150);
+});
+</script>
